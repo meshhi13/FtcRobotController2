@@ -56,24 +56,26 @@ public class rightSideBlue extends AutoMethods {
             turnWithDegrees(-135);
         }
 
-        rotateElapsed(0.4, 1);
+        rotateElapsed(0.4, .5);
         driveForward(19);
-        strafeLeft(27);
-        driveBackward(1);
-        rotateElapsed(.123, .5);
+        strafeLeft(26);
+        if (position != PropPosition.LEFT) {
+            strafeLeft(1);
+            driveBackward(1);
+        }
+        rotateElapsed(.118, .5);
         clawElapsed(1.0, 1);
-        rotateElapsed(1, 1);
+        rotateElapsed(1, .5);
         clawElapsed(0, .3);
-        rotateElapsed(0.4, 1);
         driveBackward(106);
-        strafeRight(20);
+
 
         if (position == PropPosition.RIGHT){
-            strafeRight(2);
+            strafeRight(21);
         } else if (position == PropPosition.CENTER) {
-            strafeRight(8);
+            strafeRight(27);
         } else {
-            strafeRight(16);
+            strafeRight(33);
         }
 
         if (back.getDistance(DistanceUnit.INCH) > 10){
@@ -82,13 +84,14 @@ public class rightSideBlue extends AutoMethods {
         else {
             driveBackward(back.getDistance(DistanceUnit.INCH) - 1.5);
         }
-
+        rotateElapsed(0.4, .5);
         outtakeElapsed(.15, .5);
-        liftArm(2208, 1, 1);
+        liftArm(2908, 1, 1);
         outtakeElapsed(1, 1);
         outtakeElapsed(0, .5);
 
         driveForward(1);
+        resetArm(1, 1);
 
         while (opModeIsActive()) {
             telemetry.addData("X", drive.getPoseEstimate().getX());

@@ -29,36 +29,30 @@ public class leftSideRed extends AutoMethods {
         driveForward(22);
 
         if (position == PropPosition.RIGHT){
+            driveForward(22);
             turnWithDegrees(-45);
-            driveForward(10);
-            driveBackward(8);
-            clawRotateServo.setPosition(0);
-            sleep(1000);
-            clawServo.setPosition(0.0);
-            sleep(1000);
-            clawRotateServo.setPosition(0.4);
-            driveBackward(2);
-            turnWithDegrees(45);
+            driveForward(8);
+            driveBackward(5);
+            rotateElapsed(0.1, 1);
+            clawElapsed(0, 1);
+            driveBackward(3);
+            turnWithDegrees(-45);
         } else if (position == PropPosition.CENTER){
-            driveForward(14);
-            driveBackward(12);
-            clawRotateServo.setPosition(0);
-            sleep(1000);
-            clawServo.setPosition(0.0);
-            sleep(1000);
-            clawRotateServo.setPosition(0.4);
+            driveForward(30);
+            driveBackward(6);
+            rotateElapsed(0.1, 1);
+            clawElapsed(0, 1);
             driveBackward(2);
+            turnWithDegrees(-90);
         } else {
+            driveForward(22);
             turnWithDegrees(45);
-            driveForward(10);
-            driveBackward(8);
-            clawRotateServo.setPosition(0);
-            sleep(1000);
-            clawServo.setPosition(0.0);
-            sleep(1000);
-            clawRotateServo.setPosition(0.4);
-            driveBackward(2);
-            turnWithDegrees(-45);
+            driveForward(8);
+            driveBackward(5);
+            rotateElapsed(0.1, 1);
+            clawElapsed(0, 1);
+            driveBackward(3);
+            turnWithDegrees(-135);
         }
 
         while (opModeIsActive()){
