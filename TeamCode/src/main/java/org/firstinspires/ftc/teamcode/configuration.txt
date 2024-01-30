@@ -1,0 +1,18 @@
+motor0 - expansion hub - "LF"
+motor1 - expansion hub - "RF"
+motor0 - control hub - "LB"
+motor1 - control hub - "RB"
+
+motor2 - expansion hub - "hanger"
+motor2 - control hub - "slideMotor"
+
+servo0 - control hub - "outtakeServo"
+servo1 - control hub - "launchServo"
+servo0 - expansion hub - "clawServo"
+serov1 - expansion hub - "clawRotateServo"
+
+digital0 - expansion hub - "slideLimit"
+digital1 - expansion hub - "hangerLimitBottom"
+digital2 - expansion hub - "hangerLimitTop"
+
+
